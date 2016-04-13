@@ -71,12 +71,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sqoop", "Sqoop", "{ED3C3FE5
 		Sqoop\script.txt = Sqoop\script.txt
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Slides", "Slides", "{9854F894-69A6-4DC7-A27D-363C6489C18E}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\..\Desktop\Dia 1.pdf = ..\..\..\..\Desktop\Dia 1.pdf
-		..\..\..\..\Desktop\Dia 2.pdf = ..\..\..\..\Desktop\Dia 2.pdf
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
