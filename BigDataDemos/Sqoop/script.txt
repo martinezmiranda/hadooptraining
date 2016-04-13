@@ -1,0 +1,11 @@
+--mysql
+CREATE DATABASE TestSqoopDB;
+USE TestSqoopDB;
+CREATE TABLE TestTable(id int not null auto_increment primary key, data varchar(100));
+INSERT INTO TestTable(null,'Hola esto es una prueba');
+INSERT INTO TestTable(null,'Mas datos de prueba');
+EXIT;
+
+--sqoop
+su - hdfs
+sqoop import –connect jdbc:mysql://127.0.0.1/TestSqoopDB –username root –table TestTable \ –hive-import --driver com.mysql.jdbc.Driver

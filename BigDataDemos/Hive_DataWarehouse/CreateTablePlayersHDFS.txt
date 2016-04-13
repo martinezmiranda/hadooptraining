@@ -1,0 +1,32 @@
+USE Baseball;
+
+CREATE TABLE Players
+(
+playerID string,
+birthYear int,
+birthMonth int,
+birthDay int,
+birthCountry string,
+birthState string,
+birthCity string,
+deathYear int,
+deathMonth int,
+deathDay int,
+deathCountry string,
+deathState string,
+deathCity string,
+nameFirst string,
+nameLast string,
+nameGiven string,
+weight int,
+height int,
+bats string,
+throws string,
+debut string,
+finalGame string,
+retroID string,
+bbrefID string
+)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+STORED AS TEXTFILE  
+tblproperties ("skip.header.line.count"="1");

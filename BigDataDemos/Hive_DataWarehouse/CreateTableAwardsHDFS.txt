@@ -1,0 +1,14 @@
+USE Baseball;
+
+CREATE TABLE Awards
+(
+playerID string,
+awardID string,
+yearID int,
+lgID string,
+tie string,
+notes string
+)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t'
+STORED AS TEXTFILE    
+TBLPROPERTIES ("skip.header.line.count"="1");

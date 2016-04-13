@@ -1,0 +1,2 @@
+LOAD DATA INPATH '/tmp/admin/Awards.tsv' OVERWRITE INTO TABLE Baseball.Awards;
+LOAD DATA INPATH '/tmp/admin/Players.csv' OVERWRITE INTO TABLE Baseball.Players;

@@ -1,0 +1,111 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"clusterLoginPassword": {
+			"type": "securestring",
+			"metadata": {
+				"description": "The password for the cluster login."
+			}
+		}		
+	},
+	"variables": {
+		"defaultApiVersion": "2015-05-01-preview",
+		"clusterApiVersion": "2015-03-01-preview",
+		"clusterStorageAccountName": "hdidemoapril"
+	},
+	"resources": [
+	{
+		"name": "fmartinezhdidemoaprilpowershell",
+		"type": "Microsoft.HDInsight/clusters",
+		"location": "North Europe",
+		"apiVersion": "[variables('clusterApiVersion')]",
+		"tags": {
+			
+		},
+		"properties": {
+			"clusterVersion": "3.3",
+			"osType": "Linux",
+			"clusterDefinition": {
+				"kind": "hadoop",
+				"configurations": {
+				"mapred-site": {
+						"mapreduce.map.memory.mb": "4096",
+						"mapreduce.reduce.memory.mb": "4096",
+						"mapreduce.task.io.sort.mb": "2048",
+						"mapreduce.map.java.opts": "-Xmx3276m",
+						"mapreduce.reduce.java.opts": "-Xmx3276m",
+						"yarn.app.mapreduce.am.mb": "4096",
+						"yarn.app.mapreduce.am.command-opts": "-Xmx3276m -Dhdp.version=${hdp.version}"
+					},
+				"hive-env": {
+						"hive_database": "Existing MSSQL Server database with SQL authentication",
+						"hive_database_name": "hdimadridsql",
+						"hive_database_type": "mssql",
+						"hive_existing_mssql_server_database": "hdimadridsql",
+						"hive_existing_mssql_server_host": "hdimadridsql.database.windows.net",
+						"hive_hostname": "hdimadridsql.database.windows.net"
+					},
+				"hive-site": {
+						"hive.tez.container.size": "2048",
+						"hive.auto.convert.join.noconditionaltask.size": "52428800",
+						"tez.am.resource.memory.mb": "1536",
+						"tez.task.resource.memory.mb": "1536",
+						"javax.jdo.option.ConnectionURL": "jdbc:sqlserver://hdimadridsql.database.windows.net;database=hdimadridsql;encrypt=true;trustServerCertificate=true;create=false;loginTimeout=300;sendStringParametersAsUnicode=true;prepareSQL=0",
+						"javax.jdo.option.ConnectionUserName": "fmartinez",
+						"javax.jdo.option.ConnectionPassword": "[parameters('clusterLoginPassword')]",
+						"javax.jdo.option.ConnectionDriverName": "com.microsoft.sqlserver.jdbc.SQLServerDriver"
+					},
+					"gateway": {
+						"restAuthCredential.isEnabled": "true",
+						"restAuthCredential.username": "fmartinez",
+						"restAuthCredential.password": "[parameters('clusterLoginPassword')]"
+					},
+				}
+			},	
+			"storageProfile": {
+				"storageaccounts": [{
+					"name": "hdidemoapril.blob.core.windows.net",
+					"isDefault": true,
+					"container": "fmartinezhdidemoaprilpowershell",
+					"key": "1/44YO16M+XVRWoOd/dr8C6aE6feNyzSx1Et7Y7QorrXy7gCxEdWLQlHO1KmNJFSj1o/u1C1xHec0gnxlmhiPA=="
+				}]
+			},
+			"computeProfile": {
+				"roles": [{
+					"name": "headnode",
+					"targetInstanceCount": "1",
+					"hardwareProfile": {
+						"vmSize": "Large"
+					},
+					"osProfile": {
+						"linuxOperatingSystemProfile": {
+							"username": "fmartinez",
+							"password": "[parameters('clusterLoginPassword')]"
+						}
+					}
+				},
+				{
+					"name": "workernode",
+					"targetInstanceCount": "2",
+					"hardwareProfile": {
+						"vmSize": "Large"
+					},
+					"osProfile": {
+						"linuxOperatingSystemProfile": {
+							"username": "fmartinez",
+							"password": "[parameters('clusterLoginPassword')]"
+						}
+					}
+				}]
+			}
+		}
+	}],
+	"outputs": {
+		"cluster": {
+			"type": "object",
+			"value": "[reference(resourceId('Microsoft.HDInsight/clusters',
+				'fmartinezhdidemoaprilpowershell'))]"
+		}
+	}
+}

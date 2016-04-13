@@ -1,0 +1,30 @@
+USE Baseball;
+
+CREATE TABLE PartitionedPlayers
+(
+playerID string,
+birthMonth int,
+birthDay int,
+birthCountry string,
+birthCity string,
+deathYear int,
+deathMonth int,
+deathDay int,
+deathCountry string,
+deathState string,
+deathCity string,
+nameFirst string,
+nameLast string,
+nameGiven string,
+weight int,
+height int,
+bats string,
+throws string,
+debut string,
+finalGame string,
+retroID string,
+bbrefID string
+)
+PARTITIONED BY (BirthYear INT, BirthState STRING)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+STORED AS TEXTFILE;

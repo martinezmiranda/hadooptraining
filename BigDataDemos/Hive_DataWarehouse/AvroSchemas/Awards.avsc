@@ -1,0 +1,1 @@
+{"type":"record","name":"Baseball.Awards","fields":[{"name":"playerID","type":"string"},{"name":"awardID","type":"string"},{"name":"yearID","type":"int"]},{"name":"lgID","type":"string"},{"name":"tie","type":["null","string"]},{"name":"notes","type":["null","string"]}]}

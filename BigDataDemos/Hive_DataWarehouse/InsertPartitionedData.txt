@@ -1,0 +1,2 @@
+INSERT OVERWRITE TABLE PartitionedPlayers PARTITION (BirthYear,BirthState)
+SELECT playerid,birthmonth,birthday,birthcountry,birthcity,deathyear,deathmonth,deathday,deathcountry,deathstate,deathcity,namefirst,namelast,namegiven,weight,height,bats,throws,debut,finalgame,retroid,bbrefid,BirthYear,BirthState FROM Players WHERE BirthYear > 1992; 

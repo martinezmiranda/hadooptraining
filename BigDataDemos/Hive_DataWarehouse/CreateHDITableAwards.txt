@@ -1,0 +1,15 @@
+USE Baseball;
+
+CREATE TABLE Awards
+(
+playerID string,
+awardID string,
+yearID int,
+lgID string,
+tie string,
+notes string
+)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t'
+STORED AS TEXTFILE  
+LOCATION 'wasb://datawarehouse@hdidemoapril.blob.core.windows.net/DW_Demo/Awards'
+TBLPROPERTIES ("skip.header.line.count"="1");

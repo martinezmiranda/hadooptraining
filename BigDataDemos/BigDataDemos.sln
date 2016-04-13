@@ -1,0 +1,103 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hive_DataWarehouse", "Hive_DataWarehouse", "{CB035D8D-5007-47DD-B688-6018173FE046}"
+	ProjectSection(SolutionItems) = preProject
+		Hive_DataWarehouse\CreateHDITableAwards.txt = Hive_DataWarehouse\CreateHDITableAwards.txt
+		Hive_DataWarehouse\CreateHDITableAwardsAvro.txt = Hive_DataWarehouse\CreateHDITableAwardsAvro.txt
+		Hive_DataWarehouse\CreateHDITablePlayers.txt = Hive_DataWarehouse\CreateHDITablePlayers.txt
+		Hive_DataWarehouse\CreateORCTablePlayersHDFS.txt = Hive_DataWarehouse\CreateORCTablePlayersHDFS.txt
+		Hive_DataWarehouse\CreatePartitionedTablePlayersHDFS.txt = Hive_DataWarehouse\CreatePartitionedTablePlayersHDFS.txt
+		Hive_DataWarehouse\CreateTableAwardsHDFS.txt = Hive_DataWarehouse\CreateTableAwardsHDFS.txt
+		Hive_DataWarehouse\CreateTablePlayersHDFS.txt = Hive_DataWarehouse\CreateTablePlayersHDFS.txt
+		Hive_DataWarehouse\InsertPartitionedData.txt = Hive_DataWarehouse\InsertPartitionedData.txt
+		Hive_DataWarehouse\LoadDataHDFS.txt = Hive_DataWarehouse\LoadDataHDFS.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AvroSchemas", "AvroSchemas", "{010D25F1-C431-4445-870A-0597082CC056}"
+	ProjectSection(SolutionItems) = preProject
+		Hive_DataWarehouse\AvroSchemas\Awards.avsc = Hive_DataWarehouse\AvroSchemas\Awards.avsc
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Awards", "Awards", "{DC5C1EC7-AA6B-43ED-B28F-0F4AC3DC1B14}"
+	ProjectSection(SolutionItems) = preProject
+		Hive_DataWarehouse\Awards\Awards.csv = Hive_DataWarehouse\Awards\Awards.csv
+		Hive_DataWarehouse\Awards\Awards.tsv = Hive_DataWarehouse\Awards\Awards.tsv
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DW_Demo", "DW_Demo", "{E444823B-A13A-44ED-B3FB-FB258B864C69}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Players", "Players", "{AD186619-C5CA-49CF-879E-A463D67BEA1F}"
+	ProjectSection(SolutionItems) = preProject
+		Hive_DataWarehouse\Players\Players.csv = Hive_DataWarehouse\Players\Players.csv
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Awards", "Awards", "{A4E3EAE1-5245-49B3-86F3-0C520B27FC48}"
+	ProjectSection(SolutionItems) = preProject
+		Hive_DataWarehouse\DW_Demo\Awards\Awards.tsv = Hive_DataWarehouse\DW_Demo\Awards\Awards.tsv
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Players", "Players", "{B92FB6A7-6FB3-448F-B39A-515F63D8A570}"
+	ProjectSection(SolutionItems) = preProject
+		Hive_DataWarehouse\DW_Demo\Players\Players.csv = Hive_DataWarehouse\DW_Demo\Players\Players.csv
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pig", "Pig", "{ADB6887F-343D-4639-9264-52167EFA08EA}"
+	ProjectSection(SolutionItems) = preProject
+		Pig\elQuijote.txt = Pig\elQuijote.txt
+		Pig\pigScript.txt = Pig\pigScript.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ambari_API", "Ambari_API", "{C8D1A231-A53D-4581-AE54-A36A591661BF}"
+	ProjectSection(SolutionItems) = preProject
+		Ambari_API\AmbariJobTracker_HDI.ps1 = Ambari_API\AmbariJobTracker_HDI.ps1
+		Ambari_API\AmbariJobTracker_HDP.ps1 = Ambari_API\AmbariJobTracker_HDP.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HDI_PowerShell", "HDI_PowerShell", "{7E7207A8-BEAA-4ADB-A4A9-4AE5EF68504D}"
+	ProjectSection(SolutionItems) = preProject
+		HDI_PowerShell\clusterCreationScript.ps1 = HDI_PowerShell\clusterCreationScript.ps1
+		HDI_PowerShell\clusterCreationTemplate.json = HDI_PowerShell\clusterCreationTemplate.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HDI_SDK", "HDI_SDK", "{0BDC0FD8-8FEA-4F9D-8753-66CD7179DAE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HDI_SDK", "HDI_SDK\HDI_SDK\HDI_SDK.csproj", "{3081ADAC-1B80-4B7F-A7DF-717B8FBB6970}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sqoop", "Sqoop", "{ED3C3FE5-11AB-4400-81CB-B2168F842690}"
+	ProjectSection(SolutionItems) = preProject
+		Sqoop\script.txt = Sqoop\script.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Slides", "Slides", "{9854F894-69A6-4DC7-A27D-363C6489C18E}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Desktop\Dia 1.pdf = ..\..\..\..\Desktop\Dia 1.pdf
+		..\..\..\..\Desktop\Dia 2.pdf = ..\..\..\..\Desktop\Dia 2.pdf
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3081ADAC-1B80-4B7F-A7DF-717B8FBB6970}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3081ADAC-1B80-4B7F-A7DF-717B8FBB6970}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3081ADAC-1B80-4B7F-A7DF-717B8FBB6970}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3081ADAC-1B80-4B7F-A7DF-717B8FBB6970}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{010D25F1-C431-4445-870A-0597082CC056} = {CB035D8D-5007-47DD-B688-6018173FE046}
+		{DC5C1EC7-AA6B-43ED-B28F-0F4AC3DC1B14} = {CB035D8D-5007-47DD-B688-6018173FE046}
+		{E444823B-A13A-44ED-B3FB-FB258B864C69} = {CB035D8D-5007-47DD-B688-6018173FE046}
+		{AD186619-C5CA-49CF-879E-A463D67BEA1F} = {CB035D8D-5007-47DD-B688-6018173FE046}
+		{A4E3EAE1-5245-49B3-86F3-0C520B27FC48} = {E444823B-A13A-44ED-B3FB-FB258B864C69}
+		{B92FB6A7-6FB3-448F-B39A-515F63D8A570} = {E444823B-A13A-44ED-B3FB-FB258B864C69}
+		{3081ADAC-1B80-4B7F-A7DF-717B8FBB6970} = {0BDC0FD8-8FEA-4F9D-8753-66CD7179DAE8}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,8 @@
+USE Baseball;
+
+CREATE TABLE AwardsAvro
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.avro.AvroSerDe'
+STORED AS INPUTFORMAT 'org.apache.hadoop.hive.ql.io.avro.AvroContainerInputFormat'
+OUTPUTFORMAT 'org.apache.hadoop.hive.ql.io.avro.AvroContainerOutputFormat'
+LOCATION 'wasb://datawarehouse@bigdatahdistorage.blob.core.windows.net/AwardsAvro';
+TBLPROPERTIES ('avro.schema.url'='wasb://avroschemas@bigdatahdistorage.blob.core.windows.net/Awards.avsc');

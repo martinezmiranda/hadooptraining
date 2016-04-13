@@ -1,0 +1,5 @@
+document = load '/tmp/demo/elQuijote.txt'; 
+words = foreach document generate flatten(TOKENIZE((chararray)$0)) as word; 
+groups = group words by word; 
+result = foreach groups generate COUNT(words), group; 
+store result into '/tmp/demo/wordcount';
